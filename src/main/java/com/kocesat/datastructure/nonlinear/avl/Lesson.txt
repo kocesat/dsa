@@ -1,0 +1,57 @@
+  30 (balanceFactor: 2 => > 1) left heavy
+ 20 (balanceFactor: 0 - (-1) = 2 => > 0)
+10
+
+        30 (balanceFactor: 1 - (-1) = 2 > 1 => left heavy
+    10      (balanceFactor: -1 - 0= -1 < 0)
+        20
+        leftRotate(10)
+        rightRotate(30)
+
+
+
+10 root
+    20 newRoot
+15      30
+leftRotate(10)
+
+newRightChild = root.rightChild.leftChild
+newRoot.leftChild = root
+newRoot.leftChild.rightChild= newRightChild
+root = newRoot
+
+
+  30 root
+ 20 newRoot
+10  25
+rightRotate(30)
+
+
+10 h:2
+  30 h:1
+20 h:0
+
+rightRotate(30)
+10 h:2
+  20 h:1
+15h:0  30 h:0
+
+leftRotate(10)
+  20 h:1
+10h:1  30 h:0
+  15h:0
+
+
+10
+  20
+15
+
+rightRotate(20)
+  10
+    15
+      20
+
+leftRotate(10)
+  15
+10  20
+      30
